@@ -24,3 +24,8 @@ class UserDB(UserPublic):
 
 class UserList(BaseModel):
     user: list[UserPublic]
+
+
+class Jwt_Token(BaseModel):
+    access_token: str
+    token_type: str
