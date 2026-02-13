@@ -11,6 +11,7 @@ from fast_project.app import app
 from fast_project.database import get_session
 from fast_project.models import User, table_registry
 from fast_project.security import get_password_hash
+from fast_project.settings import settings
 
 
 @pytest.fixture
@@ -76,8 +77,13 @@ def user(session: Session):
 @pytest.fixture
 def token(client, user):
     response = client.post(
-        '/login',
+        '/auth/login',
         data={'username': user.email, 'password': user.clean_password},
     )
 
     return response.json()['access_token']
+
+
+@pytest.fixture
+def test_settings():
+    return settings
