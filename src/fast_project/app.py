@@ -15,10 +15,10 @@ app.include_router(users.router)
 
 
 @app.get('/', status_code=HTTPStatus.OK, response_model=Message)
-def read_root():
+async def read_root():
     return {'message': 'hello world'}
 
 
 @app.get('/teste', tags=['testar'], response_class=HTMLResponse)
-def teste():
+async def teste():
     return '<h1>test ok</h1>'
