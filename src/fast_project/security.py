@@ -61,7 +61,7 @@ async def get_current_user(
     except PyJWTError:
         raise credentials_exception
 
-    except (ExpiredSignatureError, PyJWTError):
+    except ExpiredSignatureError:
         raise credentials_exception
 
     user = await session.scalar(
