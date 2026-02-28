@@ -58,7 +58,7 @@ async def create_user(user: UserSquema, session: Session):
 @router.get('/', status_code=HTTPStatus.OK, response_model=UserList)
 async def read_users(
     session: Session,
-    current_user=Current_User,
+    current_user:Current_User,
     limit: int = 10,
     offset: int = 0,
 ):
