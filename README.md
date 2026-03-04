@@ -83,7 +83,7 @@ Secure and production-ready authentication flow.
 
 📸 API Demonstration
 🧾 Interactive Swagger Documentation
-<p align="center"> <img src="./images/swagger.png" width="900"> </p>
+<p align="center"> <img src="./imagens/swagger.png" width="900"> </p>
 
 ✔️ Organized routes
 ✔️ Protected endpoints (🔒)
@@ -91,14 +91,14 @@ Secure and production-ready authentication flow.
 ✔️ Built-in authentication testing
 
 🔐 Successful Login (JWT Issued)
-<p align="center"> <img src="./images/login.png" width="900"> </p>
+<p align="center"> <img src="./imagens/login.png" width="900"> </p>
 
 ✔️ OAuth2 Password Flow
 ✔️ Access token generated
 ✔️ Secure session started
 
 ✅ Creating a Todo (Protected Route)
-<p align="center"> <img src="./images/create_todo.png" width="900"> </p>
+<p align="center"> <img src="./imagens/create_todo.png" width="900"> </p>
 
 Example response:
 
@@ -114,7 +114,7 @@ Example response:
 ✔️ Status 200 OK
 
 ⛔ Token Expiration Handling
-<p align="center"> <img src="./images/token_expired.png" width="900"> </p>
+<p align="center"> <img src="./imagens/token_expired.png" width="900"> </p>
 
 Example response:
 
