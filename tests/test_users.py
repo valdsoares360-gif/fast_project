@@ -3,12 +3,6 @@ from http import HTTPStatus
 from fast_project.squemas import UserPublic
 
 
-def test_text(client):
-    response = client.get('/teste')
-    assert response.status_code == HTTPStatus.OK
-    assert response.text == '<h1>test ok</h1>'
-
-
 def teste_create_user(client):
 
     response = client.post(

@@ -1,21 +1,21 @@
 services:
-  
+
   fastproject_database:
-    image: postgres
+    image: postgres:16
     environment:
       POSTGRES_USER: app_user
       POSTGRES_DB: app_db
       POSTGRES_PASSWORD: app_password
     ports:
       - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
 
   fast_project:
-    image: fast_project
-    volumes:
-      - pgdata:/var/lib/postgresql/
     build: .
+    image: fast_project
     entrypoint: ./entrypoint.sh
-    ports:  
+    ports:
       - "8000:8000"
     depends_on:
       - fastproject_database

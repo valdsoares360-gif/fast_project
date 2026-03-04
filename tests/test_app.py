@@ -7,4 +7,4 @@ def test_read_root_must_return_ok_and_hello_world(client):
 
     assert response.status_code == HTTPStatus.OK
 
-    assert response.json() == {'message': 'hello world'}
+    assert response.json() == {'message': 'PROJETO USANDO FASTAPI'}
